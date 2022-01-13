@@ -1,0 +1,70 @@
+{
+  "name": "buzzology/slack-bounties",
+  "timeout": 10000,
+  "connector": false,
+  "events": {
+    "functions/events/slack/reaction_added.js": {
+      "name": "slack.reaction_added"
+    },
+    "functions/events/slack/reaction_removed.js": {
+      "name": "slack.reaction_removed"
+    },
+    "functions/events/slack/block_actions/award_bounty_confirm.js": {
+      "name": "slack.block_actions",
+      "subtype": {
+        "block_id": "award_bounty_confirm"
+      }
+    },
+    "functions/events/slack/command/bountyme.js": {
+      "name": "slack.command",
+      "subtype": {
+        "command": "bountyme"
+      }
+    },
+    "functions/events/slack/command/bountydaily.js": {
+      "name": "slack.command",
+      "subtype": {
+        "command": "bountydaily"
+      }
+    },
+    "functions/events/slack/command/bountycurrent.js": {
+      "name": "slack.command",
+      "subtype": {
+        "command": "bountycurrent"
+      }
+    },
+    "functions/events/slack/command/bountyalltime.js": {
+      "name": "slack.command",
+      "subtype": {
+        "command": "bountyalltime"
+      }
+    },
+    "functions/events/slack/command/bountyconfig.js": {
+      "name": "slack.command",
+      "subtype": {
+        "command": "bountyconfig"
+      }
+    },
+    "functions/events/slack/command/bountyemotes.js": {
+      "name": "slack.command",
+      "subtype": {
+        "command": "bountyemotes"
+      }
+    },
+    "functions/events/scheduler/daily.js": {
+      "name": "scheduler.daily",
+      "subtype": {
+        "time": "00:00 (12:00am)",
+        "timezone": "Australia — Brisbane, AU (+10:00)"
+      }
+    },
+    "functions/events/scheduler/custom.js": {
+      "name": "scheduler.weekly",
+      "subtype": {
+        "weekday": "Sunday",
+        "time": "00:00 (12:00am)",
+        "timezone": "Australia — Brisbane, AU (+10:00)"
+      }
+    }
+  }
+}
