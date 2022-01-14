@@ -37,12 +37,13 @@ This is a fairly typical flow for how the bounty process works.
 There is currently a prototype setup in a new slack. You can join using the following link: https://join.slack.com/t/slackbounties-euk5448/shared_invite/zt-11lx95wpd-cij_O1ojJLnVMGrdQCo8DQ
 
 ## Setup 
-
-### Copy the airtable base
+While you won't need to do any coding to get this running, there are a few small steps required:
 1) To get started, copy the airtable base using the following link: [Create Airtable Base](https://airtable.com/addBaseFromShare/shrE1WztivrqZFlxS?utm_source=universe_copy&exploreApplicationId=expae7goZHQO0flw6)
 2) Copy the repo into Autocode: [<img src="https://open.autocode.com/static/images/open.svg?" width="192">](https://open.autocode.com/)
 3) Link the new airtable base and target slack:
 ![Link airtable and slack](docs/link_airtable.png)
+
+If you get stuck or hit any issues please feel free to reach out!
 
 ## Slash commands
 ### Leaderboards
@@ -122,17 +123,10 @@ Definitely! MRs are what I needed it for but it can probably be used for most ot
 ### Can I lodge issues and feature requests?
 Yep!
 
+### How do I change the emotes?
+These are currently setup under `utils\config.js`. I'll allow for them to be overridden with environment variables
+down the track.
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+### How do I change the decay/income amount?
+These values are currently defined in `utils\config.js`. Down the track you'll be able to use environment variables
+to override them.
